@@ -159,7 +159,7 @@ bool CDirect2DOverlay::CDirect2DSurface::String( float x, float y, const string&
     auto rect = D2D1::RectF( x, y, x + static_cast< float >( cSize[ 0 ] ), y + static_cast< float >( cSize[ 1 ] ) );
 
     pDirect2DColorBrush->SetColor( D2D1::ColorF( color.hex() ) );
-    pDirect2DHwndRenderTarget->DrawTextW( w.c_str(), w.length(), pDirectWriteTextFormat, &rect, pDirect2DColorBrush );
+    pDirect2DHwndRenderTarget->DrawText( w.c_str(), w.length(), pDirectWriteTextFormat, &rect, pDirect2DColorBrush );
 
     return true;
 }
